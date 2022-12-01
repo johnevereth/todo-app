@@ -10,10 +10,10 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-scripts": "5.0.1",
-    "sass": "^1.56.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "compile:scss": "sass --watch src/scss/input.scss src/output.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.56.1"
   }
 }
