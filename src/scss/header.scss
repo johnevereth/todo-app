@@ -11,7 +11,17 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 4.5rem 25vw;
+    padding: 4.5rem 5vw;
+
+    @include sm {
+      padding: 4.5rem 10vw;
+    }
+    @include md {
+      padding: 4.5rem 15vw;
+    }
+    @include lg {
+      padding: 4.5rem 25vw;
+    }
   }
 
   h1 {

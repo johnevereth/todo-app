@@ -10,7 +10,22 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 4.5rem 25vw;
+  padding: 4.5rem 5vw;
+}
+@media (min-width: 480px) {
+  .header .container {
+    padding: 4.5rem 10vw;
+  }
+}
+@media (min-width: 720px) {
+  .header .container {
+    padding: 4.5rem 15vw;
+  }
+}
+@media (min-width: 960px) {
+  .header .container {
+    padding: 4.5rem 25vw;
+  }
 }
 .header h1 {
   margin: 0;
@@ -27,7 +42,7 @@
 
 .entry {
   background-color: #161a1d;
-  width: 50vw;
+  width: 90vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -39,6 +54,21 @@
   position: absolute;
   border-radius: 5px;
   top: 150px;
+}
+@media (min-width: 480px) {
+  .entry {
+    width: 80vw;
+  }
+}
+@media (min-width: 720px) {
+  .entry {
+    width: 65vw;
+  }
+}
+@media (min-width: 960px) {
+  .entry {
+    width: 50vw;
+  }
 }
 .entry .plus {
   color: #e5383b;
@@ -57,7 +87,7 @@
 }
 
 .todolist {
-  width: 50vw;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,6 +99,21 @@
   border-radius: 5px;
   top: 250px;
   color: #d3d3d3;
+}
+@media (min-width: 480px) {
+  .todolist {
+    width: 80vw;
+  }
+}
+@media (min-width: 720px) {
+  .todolist {
+    width: 65vw;
+  }
+}
+@media (min-width: 960px) {
+  .todolist {
+    width: 50vw;
+  }
 }
 .todolist .listitem {
   display: flex;
@@ -122,6 +167,7 @@ body {
   box-sizing: border-box;
   font-family: sans-serif;
   position: relative;
+  width: 100%;
 }
 
 /*# sourceMappingURL=output.css.map */
