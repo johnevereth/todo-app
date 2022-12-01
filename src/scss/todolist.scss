@@ -1,5 +1,4 @@
 .todolist {
-  background-color: $black1;
   width: 50vw;
   display: flex;
   flex-direction: column;
@@ -21,19 +20,7 @@
     width: 100%;
     border-bottom: 1px solid $black2;
     height: 80px;
-
-    &:hover {
-      color: $white2;
-      background-color: #262829;
-
-      & .trash {
-        color: $gray1;
-
-        &:hover {
-          color: $red1;
-        }
-      }
-    }
+    border-radius: 5px;
 
     .main {
       display: flex;
@@ -75,10 +62,6 @@
       cursor: pointer;
       font-size: 1rem;
       margin-right: 3rem;
-
-      &:hover {
-        color: $white2;
-      }
     }
   }
 }

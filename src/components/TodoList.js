@@ -3,7 +3,7 @@ import { BsFillTrashFill } from "react-icons/bs";
 import { FiCheck } from "react-icons/fi";
 import Checkbox from "react-custom-checkbox";
 
-const TodoList = () => {
+const TodoList = (props) => {
   const [list, setList] = useState([
     { checked: false, description: "Example 1 of list item" },
     { checked: false, description: "Example 2 of list item" },
@@ -13,7 +13,10 @@ const TodoList = () => {
 
   const printedList = list.map((listItem) => {
     return (
-      <div className="listitem">
+      <div
+        className="listitem"
+        style={{ backgroundColor: props.brightness ? "#b1a7a6" : "#161a1d" }}
+      >
         <div className="main">
           {listItem.checked ? (
             <Checkbox
@@ -28,15 +31,22 @@ const TodoList = () => {
                     alignSelf: "stretch",
                   }}
                 >
-                  <FiCheck color="white" size={24} />
+                  <FiCheck
+                    style={{ color: props.brightness ? "#161a1d" : "#d3d3d3" }}
+                    size={24}
+                  />
                 </div>
               }
               borderColor="#e5383b"
               // borderWidth={0}
               borderRadius={24}
               style={{ overflow: "hidden" }}
-              size={24}
-              label={<p>{listItem.description}</p>}
+              size={20}
+              label={
+                <p style={{ color: props.brightness ? "#161a1d" : "#d3d3d3" }}>
+                  {listItem.description}
+                </p>
+              }
             />
           ) : (
             <Checkbox
@@ -51,19 +61,29 @@ const TodoList = () => {
                     alignSelf: "stretch",
                   }}
                 >
-                  <FiCheck color="white" size={24} />
+                  <FiCheck
+                    style={{ color: props.brightness ? "#161a1d" : "#d3d3d3" }}
+                    size={24}
+                  />
                 </div>
               }
               borderColor="#e5383b"
               // borderWidth={0}
-              borderRadius={20}
+              borderRadius={24}
               style={{ overflow: "hidden" }}
               size={24}
-              label={<p>{listItem.description}</p>}
+              label={
+                <p style={{ color: props.brightness ? "#161a1d" : "#d3d3d3" }}>
+                  {listItem.description}
+                </p>
+              }
             />
           )}
         </div>
-        <BsFillTrashFill className="trash" />
+        <BsFillTrashFill
+          className="trash"
+          style={{ color: props.brightness ? "#161a1d" : "#d3d3d3" }}
+        />
       </div>
     );
   });
@@ -71,9 +91,18 @@ const TodoList = () => {
   return (
     <div className="todolist">
       {printedList}
-      <div className="bottom">
-        <p>{list.length} items left</p>
-        <button className="btn" onClick={() => setList([])}>
+      <div
+        className="bottom"
+        style={{ backgroundColor: props.brightness ? "#b1a7a6" : "#161a1d" }}
+      >
+        <p style={{ color: props.brightness ? "#161a1d" : "#d3d3d3" }}>
+          {list.length} items left
+        </p>
+        <button
+          style={{ color: props.brightness ? "#161a1d" : "#d3d3d3" }}
+          className="btn"
+          onClick={() => setList([])}
+        >
           Clear All
         </button>
       </div>
