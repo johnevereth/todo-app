@@ -2,12 +2,13 @@
 @import "breakpoints";
 @import "header";
 @import "entry";
+@import "todolist";
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  background-color: $black;
+  background-color: $black2;
   position: relative;
 }
