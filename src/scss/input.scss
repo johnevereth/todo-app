@@ -1,6 +1,7 @@
 @import "variables";
 @import "breakpoints";
 @import "header";
+@import "entry";
 
 body {
   margin: 0;
@@ -8,4 +9,5 @@ body {
   box-sizing: border-box;
   font-family: sans-serif;
   background-color: $black;
+  position: relative;
 }
