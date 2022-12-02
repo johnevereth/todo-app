@@ -74,6 +74,7 @@
   color: #e5383b;
   font-size: 2rem;
   margin: 0 1rem;
+  cursor: pointer;
 }
 .entry input {
   background-color: #161a1d;
@@ -149,7 +150,7 @@
   width: 100%;
 }
 .todolist .bottom p {
-  margin-left: 3rem;
+  margin: 1.15rem auto 1.15rem auto;
 }
 .todolist .bottom .btn {
   background: none;
@@ -159,6 +160,11 @@
   cursor: pointer;
   font-size: 1rem;
   margin-right: 3rem;
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body {

@@ -7,8 +7,16 @@ const Entry = (props) => {
       className="entry"
       style={{ backgroundColor: props.brightness ? "#b1a7a6" : "#161a1d" }}
     >
-      <BsFillPlusCircleFill className="plus" />
+      <BsFillPlusCircleFill
+        className="plus"
+        onClick={() => {
+          props.createTodo();
+          props.setInput("");
+        }}
+      />
       <input
+        onChange={(e) => props.setInput(e.target.value)}
+        value={props.input}
         placeholder="Create a new todo..."
         style={{
           backgroundColor: props.brightness ? "#b1a7a6" : "#161a1d",
